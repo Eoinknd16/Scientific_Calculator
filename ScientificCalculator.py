@@ -1,4 +1,4 @@
-#### CODE IS GLITCH FIX IF YOU CAN ####
+#### CODE IS GLITCHY FIX IF YOU CAN ####
 
 
 def main():
