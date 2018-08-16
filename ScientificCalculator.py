@@ -35,9 +35,6 @@ def main():
 
     #### This is where the user enters the numbers they are using on the calculator
 
-   # num1 = float(input("Enter a number: "))
-   # num2 = float(input("Enter another number:  \n\n(if anothr number is not required then just enter any number it will be ignored by the code)"))
-
     if choice == '1':
         num1 = float(input("Enter a number: "))
         num2 = float(input("Enter another number: "))
