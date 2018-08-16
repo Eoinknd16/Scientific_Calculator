@@ -20,6 +20,12 @@ def main():
     def exp(x,y):
             return x ** y
 
+    def power(x, y):
+        result = 1
+        for _ in range(y):
+            result *= x
+        return result
+
     #### Basic input demands for user.
 
     print("Select a function")
@@ -28,6 +34,7 @@ def main():
     print("3.  - SQUARE -")
     print("4.  - MULTIPLY -")
     print("5.  - EXPONENTIATE")
+    print("6.  - POWER - ")
 
     #### Input for choosing a mode
 
@@ -41,6 +48,8 @@ def main():
         print(num1, "+", num2, "=", add(num1, num2))
 
     elif choice == '2':
+        num1 = float(input("Enter a number: "))
+        num2 = float(input("Enter another number: "))
         print(num1, "-", num2, "=", subtract(num1, num2))
 
     elif choice == '3':
@@ -48,12 +57,19 @@ def main():
         print(num1, "^2", "=", square(num1))
 
     elif choice == '4':
-        num1 = float(input("Enter a number: "))
+        num1 = float(input("Enter at number: "))
+        num2 = float(input("Enter another number: "))
         print(num1, "*", num2, "=", multiply(num1, num2))
 
     elif choice == '5':
         num1 = float(input("Enter a number: "))
-        print(num1, "**", num2, "=", exp(num1,num2))
+        num2 = float(input("Enter another number: "))
+        print(num1, "**", num2, "=", exp(num1, num2))
+
+    elif choice == '6':
+        num1 = float(input("Enter a number: "))
+        num2 = int(input("Enter another number: "))
+        print(num1, "^", num2, "=", power(num1, num2))
 
 restart = input("Do you wish to restart? [y/n]")
 if restart == "y":
