@@ -1,7 +1,9 @@
-#### CODE IS GLITCHY FIX IF YOU CAN ####
+#### CODE IS GLITCHY FIX IF YOU CAN
+
 
 
 def main():
+    import math
 
 #### defining all the functions.
 
@@ -32,6 +34,18 @@ def main():
     def pi(x, y):
         return x * y
 
+    def sqrt(x):
+        return(math.sqrt(x))
+
+    def sin(x):
+        return(math.sin(x))
+
+    def cos(x):
+        return(math.cos(x))
+
+    def tan(x):
+        return(math.tan(x))
+
     #### Basic input demands for user.
 
     print("Select a function")
@@ -42,10 +56,15 @@ def main():
     print("5.  - EXPONENTIATE")
     print("6.  - POWER - ")
     print("7.  - DIVIDE - ")
+    print("8.  - PI - ")
+    print("9.  - SQUARE ROOT - ")
+    print("10.  - SIN - ")
+    print("11.  - COS - ")
+    print("12.  - TAN - ")
 
     #### Input for choosing a mode
 
-    choice = input("Enter a command, (1/2/3/4/5/6/7)")
+    choice = input("Enter a command, (1/2/3/4/5/6/7/8/9/10/11/12)")
 
     #### This is where the user enters the numbers they are using on the calculator
 
@@ -87,10 +106,28 @@ def main():
         num2 = float(3.14)
         print("ANSWER: ", num1, "*", num2, "=", pi(num1, num2))
 
+    elif choice == '9':
+        num1 = float(input("Enter a number: "))
+        print("ANSWER: ", num1, "root", "=", sqrt(num1))
+
+    elif choice == '10':
+        num1 = float(input("Enter a number: "))
+        print("ANSWER: ", num1, "sin(x)", "=", sin(num1))
+
+    elif choice == '11':
+        num1 = float(input("Enter a number: "))
+        print("ANSWER: ", num1, "cos(x)", "=", cos(num1))
+
+    elif choice == '5318008':
+        print("BOOBIES")
+
+    elif choice == '12':
+        num1 = float(input("Enter a number: "))
+        print("ANSWER: ", num1, "TAN(x)", "=", tan(num1))
 
 while True:
 
-    restart = input("Do you wish to restart? [y/n]")
+    restart = input("Do you wish to start calculating? [y/n]")
     if restart == "y":
          main()
 
