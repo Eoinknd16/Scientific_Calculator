@@ -26,7 +26,7 @@ def main():
     def power(x, y):
         result = 1
         for _ in range(y):
-            result *= x
+            result = x
         return result
 
     def divide(x, y):
@@ -66,8 +66,7 @@ def main():
     elif choice == '4':
         num1 = float(input("Enter at number: "))
         num2 = float(input("Enter another number: "))
-        print("ANSWER: ", num1, "*", num2, "=", multiply(num1, num2))
-
+        print("ANSWER: ", num1, "", num2, "=", multiply(num1, num2))
     elif choice == '5':
         num1 = float(input("Enter a number: "))
         num2 = float(input("Enter another number: "))
@@ -84,13 +83,13 @@ def main():
         print("ANSWER: ", num1, "/", num2, "=", divide(num1, num2))
 
 
-restart = input("Do you wish to restart? [y/n]")
-if restart == "y":
-     main()
+while True:
 
-else:
-    exit()
+    restart = input("Do you wish to restart? [y/n]")
+    if restart == "y":
+         main()
+
+    else:
+        exit()
 
 
-
-main()
