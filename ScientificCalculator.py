@@ -4,6 +4,7 @@
 
 def main():
     import math
+    import cmath
 
 #### defining all the functions.
 
@@ -35,18 +36,21 @@ def main():
         return x * y
 
     def sqrt(x):
-        return(math.sqrt(x))
+        return math.sqrt(x)
 
     def sin(x):
-        return(math.sin(x))
+        return math.sin(x)
 
     def cos(x):
-        return(math.cos(x))
+        return math.cos(x)
 
     def tan(x):
-        return(math.tan(x))
+        return math.tan(x)
 
-    #### Basic input demands for user.
+    def log(x):
+        return math.log(x, 10)
+
+    # Basic input demands for user.
 
     print("Select a function")
     print("1.  - ADD -")
@@ -61,12 +65,13 @@ def main():
     print("10.  - SIN - ")
     print("11.  - COS - ")
     print("12.  - TAN - ")
+    print("13.  - LOG_BASE 10 - ")
 
-    #### Input for choosing a mode
+    # Input for choosing a mode
 
-    choice = input("Enter a command, (1/2/3/4/5/6/7/8/9/10/11/12)")
+    choice = input("Enter a command, (1/2/3/4/5/6/7)")
 
-    #### This is where the user enters the numbers they are using on the calculator
+    # This is where the user enters the numbers they are using on the calculator
 
     if choice == '1':
         num1 = float(input("Enter a number: "))
@@ -123,13 +128,17 @@ def main():
 
     elif choice == '12':
         num1 = float(input("Enter a number: "))
-        print("ANSWER: ", num1, "TAN(x)", "=", tan(num1))
+        print("ANSWER: ", num1, "tan(x)", "=", tan(num1))
+
+    elif choice == '13':
+        num1 = float(input("Enter a number: "))
+        print("ANSWER: ", num1, "log(x)", "=", log(num1))
 
 while True:
 
-    restart = input("Do you wish to start calculating? [y/n]")
-    if restart == "y":
-         main()
+  restart = input("Do you wish to start calculating? [y/n]")
+  if restart == "y":
+    main()
 
-    else:
-        exit()
+  else:
+    exit()
