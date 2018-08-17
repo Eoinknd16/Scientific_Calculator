@@ -1,12 +1,10 @@
-#### CODE IS GLITCHY FIX IF YOU CAN
+# CODE IS GLITCHY FIX IF YOU CAN
 
-
-
+# EXPONENTIAL FUNCTION IS BROKEN
 def main():
     import math
-    import cmath
 
-#### defining all the functions.
+# defining all the functions.
 
     def add(x, y):
             return x + y
@@ -20,14 +18,11 @@ def main():
     def multiply(x, y):
             return x * y
 
-    def exp(x,y):
-            return x ** y
+    def exp(x):
+            return math.exp(x)
 
     def power(x, y):
-        result = 1
-        for _ in range(y):
-            result = x
-        return result
+        return x ** y
 
     def divide(x, y):
         return x / y
@@ -93,8 +88,7 @@ def main():
         print("ANSWER: ", num1, "", num2, "=", multiply(num1, num2))
     elif choice == '5':
         num1 = float(input("Enter a number: "))
-        num2 = float(input("Enter another number: "))
-        print("ANSWER: ", num1, "**", num2, "=", exp(num1, num2))
+        print("ANSWER: ", num1, "**", "=", exp(num1))
 
     elif choice == '6':
         num1 = float(input("Enter a number: "))
@@ -136,9 +130,9 @@ def main():
 
 while True:
 
-  restart = input("Do you wish to start calculating? [y/n]")
-  if restart == "y":
-    main()
+      restart = input("Do you wish to start calculating? [y/n]")
+      if restart == "y":
+        main()
 
-  else:
-    exit()
+      else:
+        exit()
