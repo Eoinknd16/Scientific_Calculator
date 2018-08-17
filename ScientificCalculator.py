@@ -5,9 +5,6 @@ def main():
 
 #### defining all the functions.
 
-    pi = 3.14
-
-
     def add(x, y):
             return x + y
 
@@ -31,6 +28,9 @@ def main():
 
     def divide(x, y):
         return x / y
+
+    def pi(x, y):
+        return x * y
 
     #### Basic input demands for user.
 
@@ -82,6 +82,11 @@ def main():
         num2 = int(input("Enter another number: "))
         print("ANSWER: ", num1, "/", num2, "=", divide(num1, num2))
 
+    elif choice == '8':
+        num1 = float(input("Enter a number: "))
+        num2 = float(3.14)
+        print("ANSWER: ", num1, "*", num2, "=", pi(num1, num2))
+
 
 while True:
 
@@ -91,5 +96,3 @@ while True:
 
     else:
         exit()
-
-
